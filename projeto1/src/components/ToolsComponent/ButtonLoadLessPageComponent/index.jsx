@@ -2,18 +2,18 @@ import './styles.css';
 
 import { Component } from 'react';
 
-export class ButtonLoadMorePageComponent extends Component {
+export class ButtonLoadLessPageComponent extends Component {
   render() {
-    const { text, onClick, disabled } = this.props;
+    const { text, disabled, onClick } = this.props;
     return (
       <button
         disabled={disabled}
-        className='buttonMore'
+        className='buttonLess'
         onClick={onClick}>
         {text}
       </button>
-
     );
-
   }
+
+
 }
