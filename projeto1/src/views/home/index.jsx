@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import { Component } from 'react';
+import { Component, useEffect, useState, useCallback } from 'react';
 
 import './styles.css';
 
@@ -10,8 +10,122 @@ import { ButtonLoadMorePageComponent } from '../../components/ToolsComponent/But
 import { ButtonLoadLessPageComponent } from '../../components/ToolsComponent/ButtonLoadLessPageComponent';
 import { SearchInputComponent } from '../../components/ToolsComponent/SearchInputComponent';
 
-// componente de class sem estado
-export class Home extends Component {
+
+// usando components funcionais com hooks 
+export const Home = () => {
+  const [posts, setPosts] = useState([]);
+  const [allPosts, setAllPosts] = useState([]);
+  const [page, setPage] = useState(0);
+  const [postsPerPage] = useState(2);
+  const [searchValue, setSearchValue] = useState('');
+
+
+  const noMorePosts = page + postsPerPage >= allPosts.length;
+  const noLessPosts = page < postsPerPage;
+
+  const handleLoadPost = useCallback(async (page, postsPerPage) => {
+
+    const postsAndPhotos = await loadPosts();
+
+    setPosts(postsAndPhotos.slice(page, postsPerPage));
+    setAllPosts(postsAndPhotos);
+
+  }, [])
+
+  useEffect(() => {
+    console.log(new Date().toLocaleString('pt-br'));
+    handleLoadPost(0, postsPerPage);
+  }, [handleLoadPost, postsPerPage]);
+
+
+  const loadMorePosts = () => {
+
+    const nextPage = page + postsPerPage;
+    const nextPosts = allPosts.slice(nextPage, nextPage + postsPerPage);
+    posts.push(...nextPosts);
+
+    setPosts(posts);
+    setPage(nextPage);
+  }
+
+  const loadLessPosts = () => {
+
+    const prevPage = page - postsPerPage;
+    posts.splice(prevPage, 2);
+
+    setPosts(posts);
+    setPage(prevPage);
+  }
+
+  const handleChange = (e) => {
+
+    const { value } = e.target;
+    setSearchValue(value);
+
+  }
+
+  const filteredPosts = !!searchValue ?
+    allPosts.filter(post => {
+      return post.title.toLowerCase().includes(searchValue.toLowerCase());
+    })
+    : posts;
+
+
+
+  return (
+    <section className="container">
+
+      <div className="search-container">
+        {!!searchValue && (
+
+          <h1>{searchValue}</h1>
+
+        )}
+
+        <SearchInputComponent searchValue={searchValue} handleChange={handleChange} />
+      </div>
+
+      {filteredPosts.length > 0 && (
+        <PostsComponent posts={filteredPosts} />
+      )}
+
+      {filteredPosts.length === 0 && (
+        <p>Search not found</p>
+      )}
+
+
+      <ul className="buttons">
+        <div className="button-container">
+          {!searchValue && (
+            <ButtonLoadLessPageComponent
+              text="Load less pages"
+              onClick={loadLessPosts}
+              disabled={noLessPosts}
+            />
+          )}
+
+        </div>
+        <div className="button-container">
+          {!searchValue && (
+            <ButtonLoadMorePageComponent
+              text="Load more pages"
+              onClick={loadMorePosts}
+              disabled={noMorePosts}
+            />
+          )}
+
+        </div>
+
+      </ul>
+    </section>
+
+  );
+
+}
+
+//=======================================================================================================================================
+// usando components de Classe com state
+export class Home2 extends Component {
   state = {
     posts: [],
     allPosts: [],

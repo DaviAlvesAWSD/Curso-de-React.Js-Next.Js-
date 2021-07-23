@@ -1,6 +1,6 @@
 import './styles.css'
 
-
+//component funcional 
 export const SearchInputComponent = ({ searchValue, handleChange }) => {
   return (
     <input
