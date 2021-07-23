@@ -31,5 +31,24 @@ Diario com o intuito de catalogar o meu progesso no curso
 - Props e organização dos componentes - Parte 3
 
 Ilustração: 
+
 ![atualizacao-21-07-2021-23h02](https://user-images.githubusercontent.com/75328283/126581715-7762cd42-f0cb-46a7-886a-ee740f50a289.png)
+
+# Dia 22/07/2021
+
+obs: hoje eu explorei um pouco mais a biblioteca do react e adicionei uma função de voltar a paginação 
+
+- Trabalho com inputs de texto
+- Fluxo de dados, componentes e state bs props
+- Decidir onde o estado vivo é importante (React Developer Tools)
+- Eventos Sinteticos do React (SyntheticEvent)
+- Configurando o Git e SSh Keys no Windos
+- Deploy do nosso projeto na Netlify
+  obs: tive muitos problemas para conseguir fazer esse deploy, pois demorei para perceber que no curso ele transforma a pasta do projeto em um repositorio do git, enquanto eu estava tendando da deploy nesse reposiorio que eu já tinha feito antes que por conta do git ignore não tinha a pasta build. 
+  
+- Deploy https://gallant-leavitt-cb42a0.netlify.app/ :
+- 
+![image](https://user-images.githubusercontent.com/75328283/126730507-3e1adb83-625a-4a11-b737-d412b58f872d.png)
+
+
 
