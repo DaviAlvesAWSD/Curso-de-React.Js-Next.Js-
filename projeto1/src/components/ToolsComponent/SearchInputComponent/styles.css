@@ -1,0 +1,11 @@
+.search {
+  width: 100%;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.search:focus {
+  background: rgb(229, 226, 226);
+  opacity: 0.8;
+  transition: 0.1s;
+}

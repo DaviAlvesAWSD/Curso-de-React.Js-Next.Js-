@@ -1,22 +1,22 @@
-.buttonMore {
+.buttonLess {
   width: 100%;
-  background: rgba(20, 20, 131, 0.863);
+  background: rgb(190, 32, 32);
   color: white;
   border: none;
   padding: 15px 30px;
   cursor: pointer;
 }
 
-.buttonMore:hover {
+.buttonLess:hover {
   width: 100%;
-  background: rgb(6, 6, 54);
+  background: rgb(63, 10, 10);
   color: white;
   border: none;
   padding: 15px 30px;
   cursor: pointer;
 }
 
-.buttonMore:disabled {
+.buttonLess:disabled {
   background: #888;
   cursor: not-allowed;
 }

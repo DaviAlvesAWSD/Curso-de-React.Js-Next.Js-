@@ -7,7 +7,8 @@ import './styles.css';
 import { PostsComponent } from '../../components/PostsComponent';
 import { loadPosts } from '../../utils/load-posts';
 import { ButtonLoadMorePageComponent } from '../../components/ToolsComponent/ButtonLoadMorePageComponent';
-
+import { ButtonLoadLessPageComponent } from '../../components/ToolsComponent/ButtonLoadLessPageComponent';
+import { SearchInputComponent } from '../../components/ToolsComponent/SearchInputComponent';
 
 // componente de class sem estado
 export class Home extends Component {
@@ -15,8 +16,8 @@ export class Home extends Component {
     posts: [],
     allPosts: [],
     page: 0,
-    postsPerPage: 10
-
+    postsPerPage: 2,
+    searchValue: ''
   };
 
   /*observações 
@@ -52,23 +53,80 @@ export class Home extends Component {
     this.setState({ posts, page: nextPage });
   }
 
+  loadLessPosts = () => {
+    const {
+      page,
+      postsPerPage,
+      posts
+    } = this.state;
+
+    const prevPage = page - postsPerPage;
+    posts.splice(prevPage, 2);
+
+    this.setState({ posts, page: prevPage });
+  }
+
+  handleChange = (e) => {
+    const { value } = e.target;
+    this.setState({ searchValue: value })
+  }
 
   render() {
-    const { posts, page, postsPerPage, allPosts } = this.state;
+    const { posts, page, postsPerPage, allPosts, searchValue } = this.state;
     const noMorePosts = page + postsPerPage >= allPosts.length;
+    const noLessPosts = page < postsPerPage;
+
+    const filteredPosts = !!searchValue ?
+      allPosts.filter(post => {
+        return post.title.toLowerCase().includes(searchValue.toLowerCase());
+      })
+      : posts;
 
     return (
       <section className="container">
-        <PostsComponent posts={posts} />
 
-        <div class="button-container">
-          <ButtonLoadMorePageComponent
-            text="Load more pages"
-            onClick={this.loadMorePosts}
-            disabled={noMorePosts}
-          />
+        <div className="search-container">
+          {!!searchValue && (
 
+            <h1>{searchValue}</h1>
+
+          )}
+
+          <SearchInputComponent searchValue={searchValue} handleChange={this.handleChange} />
         </div>
+
+        {filteredPosts.length > 0 && (
+          <PostsComponent posts={filteredPosts} />
+        )}
+
+        {filteredPosts.length === 0 && (
+          <p>Search not found</p>
+        )}
+
+
+        <ul className="buttons">
+          <div className="button-container">
+            {!searchValue && (
+              <ButtonLoadLessPageComponent
+                text="Load less pages"
+                onClick={this.loadLessPosts}
+                disabled={noLessPosts}
+              />
+            )}
+
+          </div>
+          <div className="button-container">
+            {!searchValue && (
+              <ButtonLoadMorePageComponent
+                text="Load more pages"
+                onClick={this.loadMorePosts}
+                disabled={noMorePosts}
+              />
+            )}
+
+          </div>
+
+        </ul>
       </section>
 
     );

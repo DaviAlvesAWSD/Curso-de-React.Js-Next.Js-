@@ -6,6 +6,14 @@
 
 .button-container {
   min-height: 100px;
-  display: flex;
+  display: inline-block;
   align-items: flex-end;
+}
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+.search-container h1 {
+  margin-bottom: 30px;
 }
