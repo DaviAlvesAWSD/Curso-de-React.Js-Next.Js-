@@ -47,8 +47,14 @@ obs: hoje eu explorei um pouco mais a biblioteca do react e adicionei uma funç�
   obs: tive muitos problemas para conseguir fazer esse deploy, pois demorei para perceber que no curso ele transforma a pasta do projeto em um repositorio do git, enquanto eu estava tendando da deploy nesse reposiorio que eu já tinha feito antes que por conta do git ignore não tinha a pasta build. 
   
 - Deploy https://gallant-leavitt-cb42a0.netlify.app/ :
-- 
+
 ![image](https://user-images.githubusercontent.com/75328283/126730507-3e1adb83-625a-4a11-b737-d412b58f872d.png)
 
+
+# Dia 23/07/2021
+
+-  Migrando para React Hooks
+-  Mais sobre this.setState em classes
+-  Introdução à testes com jet e Testing Library - Parte 1
 
 
