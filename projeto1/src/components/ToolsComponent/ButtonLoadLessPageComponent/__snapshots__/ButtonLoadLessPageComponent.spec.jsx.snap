@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonLoadLessPageComponent /> should match snapshot 1`] = `
+<button
+  class="buttonLess"
+>
+  Load less
+</button>
+`;
