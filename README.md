@@ -55,6 +55,15 @@ obs: hoje eu explorei um pouco mais a biblioteca do react e adicionei uma funç�
 
 -  Migrando para React Hooks
 -  Mais sobre this.setState em classes
--  Introdução à testes com jet e Testing Library - Parte 1
 
+# Dia 26/07/2021
+- Indrodução à testes com jest e Testing Library - parte 1
+- Indrodução à testes com jest e Testing Library - parte 2
+- Indrodução à testes com jest e Testing Library - parte 3
+- Indrodução à testes com jest e Testing Library - parte 4
+  - realizei os testes nos components (menos na home, pois é o conteudo da proxima sessão), e criei       uma snapshot para cada teste de componente
+   
+ Ilustração:
+ ![Test spec PostCardComponent](https://user-images.githubusercontent.com/75328283/127071199-d65368c2-66eb-46b3-863d-8d224062f234.png)
 
+ 
