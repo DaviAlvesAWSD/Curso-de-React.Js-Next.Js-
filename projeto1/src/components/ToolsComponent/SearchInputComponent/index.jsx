@@ -1,6 +1,7 @@
-import './styles.css'
+import P from 'prop-types';
+import './styles.css';
 
-
+//component funcional
 export const SearchInputComponent = ({ searchValue, handleChange }) => {
   return (
     <input
@@ -11,4 +12,9 @@ export const SearchInputComponent = ({ searchValue, handleChange }) => {
       placeholder="Type your search"
     />
   );
-}
+};
+
+SearchInputComponent.propTypes = {
+  searchValue: P.string.isRequired,
+  handleChange: P.func.isRequired,
+};
