@@ -57,6 +57,7 @@ obs: hoje eu explorei um pouco mais a biblioteca do react e adicionei uma funç�
 -  Mais sobre this.setState em classes
 
 # Dia 26/07/2021
+
 - Indrodução à testes com jest e Testing Library - parte 1
 - Indrodução à testes com jest e Testing Library - parte 2
 - Indrodução à testes com jest e Testing Library - parte 3
@@ -65,5 +66,15 @@ obs: hoje eu explorei um pouco mais a biblioteca do react e adicionei uma funç�
    
  Ilustração:
  ![Test spec PostCardComponent](https://user-images.githubusercontent.com/75328283/127071199-d65368c2-66eb-46b3-863d-8d224062f234.png)
-
  
+ # Dia 27/07/2021
+
+- Eslint, prettier, editorconfig e props-types
+  - comando: npx eslint --init
+  - comando: npx eslint src/**/*.jsx --fix
+  - comando: npm test -- --watchAll="false" "--coverage"
+  - comando: npm i -D prettier eslint-config-prettier eslint-plugin-prettier  
+
+- ERRATA : defaultProps e destructuring
+
+obs(Hoje tive muita dificuldade com as configurações, queria ter começado a outra sessão ainda hoje, mas por conta dos erros que tive que corrigir não consegui, porem consegui terminar a segunda seção 2 (React o básico))
