@@ -78,3 +78,14 @@ obs: hoje eu explorei um pouco mais a biblioteca do react e adicionei uma funç�
 - ERRATA : defaultProps e destructuring
 
 obs(Hoje tive muita dificuldade com as configurações, queria ter começado a outra sessão ainda hoje, mas por conta dos erros que tive que corrigir não consegui, porem consegui terminar a segunda seção 2 (React o básico))
+
+# Dia 02/08/2021
+-> Inicio da seção 20: JavaScript Essencial - Bônus;
+
+- Arrays Arrays - Atribuição via desestruturação (destructuring assignment)
+- Objetos - Atribuição via desestruturação (destructuring assignment)
+- Funções
+- Array filter
+- Arry Map
+- Array Reduce
+
