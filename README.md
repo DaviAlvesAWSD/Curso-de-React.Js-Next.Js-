@@ -90,3 +90,12 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   - Arry Map
   - Array Reduce
 
+# Dia 03/08/2021
+
+- seção 20: JavaScript Essencial - Bônus
+  - Filter + map + reduce
+  - Foreach
+  - Classes
+  - Metodos estáticos
+  - Promises
+
