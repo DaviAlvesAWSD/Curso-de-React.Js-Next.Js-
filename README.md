@@ -98,4 +98,10 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   - Classes
   - Metodos estáticos
   - Promises
+  
+# Dia 04/08/2021
+- seção 20: JavaScript Essencial - Bônus
+  - Async / Await
+  - Fetch API
+  - Fetch API e Axios
 
