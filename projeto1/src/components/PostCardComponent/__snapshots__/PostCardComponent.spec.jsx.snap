@@ -13,6 +13,7 @@ exports[`<PostCardComponent /> should match snapshot 1`] = `
   >
     <h2>
       title 1
+       
     </h2>
     <p>
       body 1

@@ -18,6 +18,4 @@ describe('<PostCardComponent />', () => {
     const { container } = render(<PostCardComponent {...props} />);
     expect(container.firstChild).toMatchSnapshot();
   });
-
 });
-
