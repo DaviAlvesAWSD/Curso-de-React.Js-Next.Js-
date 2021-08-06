@@ -105,3 +105,11 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   - Fetch API
   - Fetch API e Axios
 
+# Dia 06/08/2021
+- seção 3: Mock Service Worker e testes para <Home />
+  - Configurando Mock Service Worker para iniciar os teste
+  - Testando os componentes renderizados pelo template <Home />
+  - Testando a busca por posts
+  - Testando o botão "Load more posts"
+  
+
