@@ -100,16 +100,29 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   - Promises
   
 # Dia 04/08/2021
+
 - seção 20: JavaScript Essencial - Bônus
   - Async / Await
   - Fetch API
   - Fetch API e Axios
 
 # Dia 06/08/2021
+
 - seção 3: Mock Service Worker e testes para Home 
   - Configurando Mock Service Worker para iniciar os teste
   - Testando os componentes renderizados pelo template <Home />
   - Testando a busca por posts
   - Testando o botão "Load more posts"
+
+# Dia 09/08/2021
+
+- Seção 4: Reack Hooks e Padrões (Teoria)
+  -  Configuração do projeto (eslint, prettier, editorconfig e prop-types)
+      - comando: npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+      - comando: npx eslint src/**/*.jsx --fix
+      -  comando: npm i prop-types  
+  - useState - React Hook (Parte 1)
   
+  ![useState - React Hook (Parte 1)](https://user-images.githubusercontent.com/75328283/128793675-b3c37e6d-ba71-4357-9f2e-70dcfd41387a.png)
+
 
