@@ -125,4 +125,14 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   
   ![useState - React Hook (Parte 1)](https://user-images.githubusercontent.com/75328283/128793675-b3c37e6d-ba71-4357-9f2e-70dcfd41387a.png)
 
+#Dia 10/08/2021
+- Seção 4: Reack Hooks e Padrões (Teoria)
+  - useStae - React Hook(Parte2)
+  - useEffect - React Hook
+  - Regras dos hooks
+  - useCallback - React Hook
+   
+  ![React Hooks (Parte 2)](https://user-images.githubusercontent.com/75328283/128950385-c07321f7-bdc9-4e86-b58f-5091d8b38110.png)
 
+  
+  
