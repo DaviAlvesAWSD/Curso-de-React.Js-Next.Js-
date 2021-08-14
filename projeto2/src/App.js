@@ -12,6 +12,11 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
 /* useRef
 const Post = ({ post, handleClick }) => {
   console.log('Post renderizou');
@@ -138,3 +143,4 @@ function App() {
   );
 }
 */
+
