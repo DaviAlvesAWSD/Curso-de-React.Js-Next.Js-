@@ -1,8 +1,18 @@
-import P from 'prop-types';
-import { useEffect, useMemo, useState, useRef } from 'react';
 import './App.css';
+import { AppContext } from './contexts/AppContext';
+import { Div } from './components/DivComponent';
 //import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
+const App = () => {
+  return (
+    <AppContext>
+      <Div />
+    </AppContext>
+  );
+};
+
+export default App;
+/* useRef
 const Post = ({ post, handleClick }) => {
   console.log('Post renderizou');
   return (
@@ -66,7 +76,7 @@ function App() {
   );
 }
 
-export default App;
+*/
 
 /* useMemo
 const Post = ({ post }) => {
