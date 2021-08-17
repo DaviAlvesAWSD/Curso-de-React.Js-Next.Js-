@@ -141,6 +141,12 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   
   ![React Hooks (Parte 3)](https://user-images.githubusercontent.com/75328283/129284869-14d3d6dd-90ba-450c-9e22-a2e6f65fe427.png)
 
-
+#Dia 14/08/2021
+- Seção 4: Reack Hooks e Padrões (Teoria)
+  - useContext Parte 1 - React Hook
+  - useContext Parte 2 - React Hook
   
+  ![React Hooks (Parte 4)](https://user-images.githubusercontent.com/75328283/129460006-357bbc47-504c-435a-aa07-6f7834573948.png)
+
+
   
