@@ -148,5 +148,11 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   
   ![React Hooks (Parte 4)](https://user-images.githubusercontent.com/75328283/129460006-357bbc47-504c-435a-aa07-6f7834573948.png)
 
+#Dia 17/08/2021
+- Seção 4: Reack Hooks e Padrões (Teoria)
+  - useReducer - React Hook
+  
+  ![React Hooks (Parte 5)](https://user-images.githubusercontent.com/75328283/129796069-1c075f51-fccd-407f-8d12-f7072628332f.png)
+
 
   
