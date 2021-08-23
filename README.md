@@ -160,5 +160,12 @@ obs(Hoje tive muita dificuldade com as configurações, queria ter começado a o
   
   ![useState - React Hook (Parte 6)](https://user-images.githubusercontent.com/75328283/129980025-d5c9492a-d43b-4b75-af40-9a24e144b4b8.png)
 
+#Dia 23/08/21
+- Seção 4: Reack Hooks e Padrões (Teoria)
+  - Criando meu próprio Hook - React Hook
+  
+  ![React Hooks - criando Hook (Parte 7)](https://user-images.githubusercontent.com/75328283/130509176-201676d2-4152-4cd9-b289-51efba6cacbb.png)
+
+
 
   
