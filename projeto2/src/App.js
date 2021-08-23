@@ -1,12 +1,63 @@
-import { createContext, useContext, useReducer, useRef } from 'react';
-import P from 'prop-types';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
-import { STATEMENT_OR_BLOCK_KEYS } from '@babel/types';
+//import { createContext, useContext, useReducer, useRef } from 'react';
+//import P from 'prop-types';
 //import { AppContext } from './contexts/AppContext';
 //import { Div } from './components/DivComponent';
 //import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
-// action.js
+const useMyHook = (cb, delay) => {
+  const saveCb = useRef();
+
+  useEffect(() => {
+    saveCb.current = cb;
+  }, [cb]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      saveCb.current();
+    }, delay);
+
+    return () => clearInterval(interval);
+  }, [delay]);
+};
+
+//App.jsx
+const App = () => {
+  const [counter, setCounter] = useState(0);
+  const [delay, setDelay] = useState(1000);
+  const [incrementor, setIncrementor] = useState(100);
+
+  useMyHook(() => setCounter((c) => c + 1), delay);
+
+  return (
+    <div>
+      <h1>Contador: {counter}</h1>
+      <p>Delay: {delay} </p>
+      <button
+        onClick={() => {
+          setDelay((d) => d + incrementor);
+        }}
+      >
+        +{incrementor}
+      </button>
+      <button
+        onClick={() => {
+          setDelay((d) => d - incrementor);
+        }}
+      >
+        -{incrementor}
+      </button>
+      <input type="number" value={incrementor} onChange={(e) => setIncrementor(Number(e.target.value))} />
+    </div>
+  );
+};
+
+export default App;
+
+/* useContext + useReducer
+
+ // action.js
 export const actions = {
   CHANGE_TITLE: 'CHANGE_TITLE',
 };
@@ -16,17 +67,6 @@ export const globalState = {
   title: 'O título do contexto',
   body: 'O body do contexto',
   counter: 0,
-};
-
-//reducers
-export const reducer = (state, action) => {
-  switch (action.type) {
-    case actions.CHANGE_TITLE: {
-      console.log('mudar titulo');
-      return { ...state, title: action.payload };
-    }
-  }
-  return { ...state };
 };
 
 //AppContext.jsx
@@ -43,6 +83,22 @@ export const AppContext = ({ children }) => {
 
 AppContext.propTypes = {
   children: P.node,
+};
+
+//reducers
+export const reducer = (state, action) => {
+  switch (action.type) {
+    case actions.CHANGE_TITLE: {
+      if (action.payload != 0) {
+        console.log('mudar titulo');
+        return { ...state, title: action.payload };
+      } else {
+        console.log('não mudar titulo');
+        return { ...state };
+      }
+    }
+  }
+  return { ...state };
 };
 
 // H1/index.jsx
@@ -74,8 +130,7 @@ const App = () => {
     </AppContext>
   );
 };
-
-export default App;
+ */
 
 /* useReducer
 export const globalState = {
